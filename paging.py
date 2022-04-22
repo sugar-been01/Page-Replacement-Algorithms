@@ -56,7 +56,7 @@ def FIFO(size,pages):
             #increment the hits variable when the page being referenced is in memory
             hits+=1
         else:
-            #when main memory is full i.e the frames list and the page being referenced is not in memoy,
+            #when main memory is full i.e the frames list, and the page being referenced is not in memoy,
             #the page that was first loaded into memory is found and replaced  
             frames[count]=i
             faults+=1
@@ -90,7 +90,7 @@ def OPT(size,pages):
                     rvm=j
                     break
                 else: 
-                    #checks which frame will be referenced later in time by using their index and removes it
+                    #checks which page will be referenced later in time by using their index and removes it
                     if toBe.index(j)>max:
                         max=toBe.index(j)
                         rvm=j
